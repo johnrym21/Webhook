@@ -1,0 +1,109 @@
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1318:16)
+    at listenInCluster (net.js:1366:12)
+    at Server.listen (net.js:1452:7)
+    at Function.listen (C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\express\lib\application.js:618:24)
+    at Object.<anonymous> (C:\BSynchro\BOT_webhook\BOT_webhook\app.js:9:5)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1345:8)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1318:16)
+    at listenInCluster (net.js:1366:12)
+    at Server.listen (net.js:1452:7)
+    at Function.listen (C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\express\lib\application.js:618:24)
+    at Object.<anonymous> (C:\BSynchro\BOT_webhook\BOT_webhook\app.js:9:5)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1345:8)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1318:16)
+    at listenInCluster (net.js:1366:12)
+    at Server.listen (net.js:1452:7)
+    at Function.listen (C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\express\lib\application.js:618:24)
+    at Object.<anonymous> (C:\BSynchro\BOT_webhook\BOT_webhook\app.js:9:5)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1345:8)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+events.js:292
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use :::3000
+    at Server.setupListenHandle [as _listen2] (net.js:1318:16)
+    at listenInCluster (net.js:1366:12)
+    at Server.listen (net.js:1452:7)
+    at Function.listen (C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\express\lib\application.js:618:24)
+    at Object.<anonymous> (C:\BSynchro\BOT_webhook\BOT_webhook\app.js:9:5)
+    at Module._compile (internal/modules/cjs/loader.js:1063:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (net.js:1345:8)
+    at processTicksAndRejections (internal/process/task_queues.js:80:21) {
+  code: 'EADDRINUSE',
+  errno: -4091,
+  syscall: 'listen',
+  address: '::',
+  port: 3000
+}
+(node:2532) [DEP0123] DeprecationWarning: Setting the TLS ServerName to an IP address is not permitted by RFC 6066. This will be ignored in a future version.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+PayloadTooLargeError: request entity too large
+    at readStream (C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\raw-body\index.js:155:17)
+    at getRawBody (C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\raw-body\index.js:108:12)
+    at read (C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\body-parser\lib\read.js:77:3)
+    at jsonParser (C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\body-parser\lib\types\json.js:135:5)
+    at Layer.handle [as handle_request] (C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\express\lib\router\index.js:317:13)
+    at C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\express\lib\router\index.js:284:7
+    at Function.process_params (C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\express\lib\router\index.js:335:12)
+    at next (C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\express\lib\router\index.js:275:10)
+    at expressInit (C:\BSynchro\BOT_webhook\BOT_webhook\node_modules\express\lib\middleware\init.js:40:5)
