@@ -1,4 +1,4 @@
-const db = require("../settings.js");
+const db = require("../database/settings.js");
 const sql = require('mssql');
 
 async function addUIBJson(Message_ID, Message_Json, saveToFile) {
