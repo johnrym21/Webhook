@@ -28,21 +28,24 @@ module.exports = function (app) {
 
             if (!(req.body.constructor === Object && Object.keys(req.body).length === 0)) {
                 dboperations.addUIBJson(Message_ID, saveToFile1, saveToFile).then(result => {
-                    if (result == false) {
-                        const response =
-                        {
-                            status: 500,
-                            info: 'Interal Server Error'
-                        };
 
-                        res.json(response);
-
-                    } else {
+                    if (result !== false) {
 
                         const response =
                         {
                             status: 200,
                             info: 'OK'
+                        };
+
+                        res.json(response);
+                    }
+                    else {
+
+                        const response =
+
+                        {
+                            status: 500,
+                            info: 'Interal Server Error'
                         };
 
                         res.json(response);
@@ -63,14 +66,15 @@ module.exports = function (app) {
             const saveToFile = JSON.stringify(req.body, null, 2);
 
             if (!(req.body.constructor === Object && Object.keys(req.body).length === 0)) {
-                dboperations.addJson(saveToFile, '', saveToFile)
+                dboperations.addJson(saveToFile)
                     .then(result => {
 
-                        if (result == false) {
+                        if (result !== false) {
+
                             const response =
                             {
-                                status: 500,
-                                info: 'Interal Server Error'
+                                status: 200,
+                                info: 'OK'
                             };
 
                             res.json(response);
@@ -78,9 +82,10 @@ module.exports = function (app) {
                         else {
 
                             const response =
+
                             {
-                                "status": 500,
-                                "info ": 'Interal Server Error'
+                                status: 500,
+                                info: 'Interal Server Error'
                             };
 
                             res.json(response);
@@ -99,7 +104,6 @@ module.exports = function (app) {
 
                 res.json(response);
             }
-            
         }
         else {
             const response =
