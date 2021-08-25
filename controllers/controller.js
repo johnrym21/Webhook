@@ -26,48 +26,80 @@ module.exports = function (app) {
             const saveToFile1 = JSON.stringify(req.body.data.parts[0].originalEvent);
             const Message_ID = Message_Json.id;
 
-            dboperations.addUIBJson(Message_ID, saveToFile1, saveToFile).then(result => {
-                console.log('saved to DataBase');
-            })
+            if (!(req.body.constructor === Object && Object.keys(req.body).length === 0)) {
+                dboperations.addUIBJson(Message_ID, saveToFile1, saveToFile).then(result => {
+                    if (result == false) {
+                        const response =
+                        {
+                            status: 500,
+                            info: 'Interal Server Error'
+                        };
 
-            fs.appendFile('uibsavedfile.txt', saveToFile, err => {
-                if (err) {
-                    console.log(err);
-                } else {
-                    console.log('success');
-                }
-            });
+                        res.json(response);
 
-            const response =
-            {
-                status: 200,
-                info: 'OK'
-            };
+                    } else {
 
-            res.json(response);
+                        const response =
+                        {
+                            status: 200,
+                            info: 'OK'
+                        };
+
+                        res.json(response);
+                    }
+                })
+            } else {
+
+                const response =
+                {
+                    "status": 500,
+                    "info ": 'Interal Server Error'
+                };
+
+                res.json(response);
+            }
         }
         else if (req.query.token == coratoken) {
             const saveToFile = JSON.stringify(req.body, null, 2);
-            dboperations.addJson(saveToFile, '', saveToFile).then(result => {
-                console.log('saved to DataBase');
 
-            })
+            if (!(req.body.constructor === Object && Object.keys(req.body).length === 0)) {
+                dboperations.addJson(saveToFile, '', saveToFile)
+                    .then(result => {
 
-            fs.appendFile('corasavedfile.txt', saveToFile, err => {
-                if (err) {
-                    console.log(err);
-                } else {
-                    console.log('success');
-                }
-            });
+                        if (result == false) {
+                            const response =
+                            {
+                                status: 500,
+                                info: 'Interal Server Error'
+                            };
 
-            const response =
-            {
-                status: 200,
-                info: 'OK'
-            };
+                            res.json(response);
+                        }
+                        else {
 
-            res.json(response);
+                            const response =
+                            {
+                                "status": 500,
+                                "info ": 'Interal Server Error'
+                            };
+
+                            res.json(response);
+                        }
+                    })
+                    .catch(function (err) {
+                        console.log(err);
+                    });
+            } else {
+
+                const response =
+                {
+                    "status": 500,
+                    "info ": 'Interal Server Error'
+                };
+
+                res.json(response);
+            }
+            
         }
         else {
             const response =

@@ -1,4 +1,4 @@
-const db = require("../database/settings.js");
+const db = require("../settings.js");
 const sql = require('mssql');
 
 async function addUIBJson(Message_ID, Message_Json, saveToFile) {
@@ -12,7 +12,7 @@ async function addUIBJson(Message_ID, Message_Json, saveToFile) {
         return insertData.recordsets;
     }
     catch (err) {
-        console.log(err);
+        return false;
     }
 }
 
@@ -25,11 +25,11 @@ async function addJson(saveToFile) {
         return insertJson.recordsets;
     }
     catch (err) {
-        console.log(err);
+        return false;
     }
 }
 
 module.exports = {
-    addJson: addJson,
-    addUIBJson: addUIBJson
+    addJson : addJson,
+    addUIBJson : addUIBJson
 }
